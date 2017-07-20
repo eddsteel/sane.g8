@@ -1,3 +1,5 @@
+sudo: required
+
 language: scala
 
 # These directories are cached to S3 at the end of the build
@@ -9,10 +11,14 @@ cache:
 jdk:
   - oraclejdk8
 
-script:
-  ## This runs the template with the default parameters, and runs test within the templated app.
-  - sbt -Dfile.encoding=UTF8 -J-XX:ReservedCodeCacheSize=256M test
+services:
+  - docker
 
-  # Tricks to avoid unnecessary cache updates
+script:
+  - sbt -Dfile.encoding=UTF8 -J-XX:ReservedCodeCacheSize=256M test
+  # delete what we don't want to cache.
   - find $HOME/.sbt -name "*.lock" | xargs rm
   - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
+  - make container
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - make push
