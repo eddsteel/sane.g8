@@ -1,1 +1,1 @@
-addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.6.6")
+addSbtPlugin("com.lucidchart" % "sbt-scalafmt" % "1.10")

@@ -1,10 +1,10 @@
 name := "$name$"
 description := "$desc$"
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.3"
 organization := "$organization$"
 version := "slice1"
 
-libraryDependencies += "org.typelevel" %% "cats" % "0.9.0"
+libraryDependencies += "org.typelevel" %% "cats" % "1.0.0-MF"
 
 Lint.settings
 Flags.settings

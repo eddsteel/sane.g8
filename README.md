@@ -1,9 +1,10 @@
-A [Giter8][g8] template for scala projects. Use `g8 eddsteel/sane`.
+A [Giter8][g8] template for scala projects. Use `g8 eddsteel/sane` or
+`sbt new eddsteel/sane`.
 
-Contains what Edd considers sane in June 2017:
+Contains what Edd considers sane in mid-2017:
 
-* Scala 2.12
-* SBT 0.13.15 (not 1 because ensime)
+* Scala 2.12.3
+* SBT 0.13.16 (not 1 because ensime)
 * GPL
 * WartRemover
 * Scalafmt (triggered on compile)
