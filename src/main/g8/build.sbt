@@ -1,5 +1,5 @@
 name := "$name$"
-description := "$pdescription$"
+description := "$desc$"
 scalaVersion := "2.12.2"
 organization := "$organization$"
 version := "slice1"
