@@ -1,0 +1,15 @@
+[Unit]
+Description=$desc$
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStartPre=-/usr/bin/docker kill $name$
+ExecStartPre=-/usr/bin/docker rm $name$
+ExecStartPre=-/usr/bin/docker pull $dhuser$/$name$:latest
+Restart=always
+ExecStart=/usr/bin/docker run -i --name $name$ -p $port$:$port$ $dhuser$/$name$:latest
+ExecStop=/usr/bin/docker stop -t 5 $name$
+
+[Install]
+WantedBy=local.target
