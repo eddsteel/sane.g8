@@ -8,7 +8,7 @@ object Lint { // avoid namie conflicts
       wartremoverErrors in (Compile, compile) ++= Warts.allBut(
         Wart.ImplicitParameter // not really an option with scala Futures.
       )
-        // Add excludes as needed (e.g. Java stuff).
-        // wartremoverExcluded += baseDirectory.value / "src" / "main" / "scala" / ""
+      // Add excludes as needed (e.g. Java stuff).
+      // wartremoverExcluded += baseDirectory.value / "src" / "main" / "scala" / ""
     )
 }

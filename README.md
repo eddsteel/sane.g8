@@ -4,11 +4,13 @@ A [Giter8][g8] template for scala projects. Use `g8 eddsteel/sane` or
 Contains what Edd considers sane in mid-2017:
 
 * Scala 2.12.3
-* SBT 0.13.16 (not 1 because ensime)
+* SBT 1.0
 * GPL
 * WartRemover
 * Scalafmt (triggered on compile)
-* Cats
+* Cats 1.0.0-MF
+* Docker
+* Travis
 
 ### Template license
 Written in 2017 by Edward Steel.
