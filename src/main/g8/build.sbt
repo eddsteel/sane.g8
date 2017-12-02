@@ -1,7 +1,7 @@
 // scalafmt: {align.tokens = ["%", "%%", ":=", "+="]}
 name         := "$name$"
 description  := "$desc$"
-scalaVersion := "2.12.3"
+scalaVersion := "2.12.4"
 organization := "$organization$"
 version      := "slice1"
 
@@ -17,7 +17,8 @@ scmInfo := Some(
   ScmInfo(url("https://github.com/$ghuser$/$name$"),
           "scm:git:https://github.com/$ghuser$/$name$.git"))
 
-libraryDependencies += "org.typelevel"           %% "cats-core" % "1.0.0-MF"
+libraryDependencies += "org.typelevel" %% "cats-core" % "1.0.0-RC1"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 
 Lint.settings
 Flags.settings
