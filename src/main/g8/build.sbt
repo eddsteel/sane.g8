@@ -17,7 +17,7 @@ scmInfo := Some(
   ScmInfo(url("https://github.com/$ghuser$/$name$"),
           "scm:git:https://github.com/$ghuser$/$name$.git"))
 
-libraryDependencies += "org.typelevel" %% "cats-core" % "1.0.0-RC1"
+libraryDependencies += "org.typelevel" %% "cats-core" % "1.1.0"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 
 Lint.settings
